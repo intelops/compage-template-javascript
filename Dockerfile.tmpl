@@ -10,9 +10,9 @@ RUN npm install
 # Add source code files to WORKDIR
 COPY . .
 
-{{if .IsServer }}
+{{if .IsRestServer }}
 # Application port (optional)
-EXPOSE {{.ServerPort}}
+EXPOSE {{.RestServerPort}}
 {{end}}
 
 # Container start command (DO NOT CHANGE and see note below)
